@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shevga Solar Business Plan — Nitesh Malusare | Mahad, Raigad</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #F8FAF8; min-height: 100vh; }
+.app { max-width: 480px; margin: 0 auto; }
+
+/* Header */
+.header { background: #1B4332; padding: 16px 20px 12px; position: sticky; top: 0; z-index: 50; }
+.header-sub { font-size: 11px; color: #74C69D; letter-spacing: 1.5px; margin-bottom: 4px; }
+.header-title { font-size: 17px; font-weight: 800; color: #fff; }
+
+/* Tabs */
+.tabs { display: flex; overflow-x: auto; background: #fff; border-bottom: 2px solid #E5E7EB; padding: 0 4px; position: sticky; top: 60px; z-index: 40; scrollbar-width: none; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab { padding: 12px 14px; border: none; background: transparent; cursor: pointer; white-space: nowrap; font-size: 12px; font-weight: 600; color: #6B7280; border-bottom: 3px solid transparent; transition: all 0.2s; }
+.tab.active { color: #1B4332; border-bottom: 3px solid #1B4332; }
+
+/* Content */
+.content { padding: 20px 16px 40px; }
+.section { margin-bottom: 28px; }
+.section-title { font-size: 15px; font-weight: 700; color: #1B4332; border-left: 4px solid #74C69D; padding-left: 12px; margin-bottom: 14px; letter-spacing: 0.3px; }
+
+/* Cards */
+.card { background: #F0FAF4; border: 1px solid #B7E4C7; border-radius: 12px; padding: 14px 16px; margin-bottom: 12px; }
+.card-blue { background: #F0F9FF; border-color: #BAE6FD; }
+.card-orange { background: #FFF7ED; border-color: #FED7AA; }
+.card-purple { background: #F5F3FF; border-color: #DDD6FE; }
+.card-yellow { background: #FFFBEB; border-color: #FCD34D; }
+.card-green-dark { background: #D8F3DC; border-color: #74C69D; }
+
+/* Hero */
+.hero { background: linear-gradient(135deg, #1B4332 0%, #2D6A4F 60%, #40916C 100%); border-radius: 16px; padding: 22px 20px; margin-bottom: 24px; color: #fff; }
+.hero-loc { font-size: 11px; letter-spacing: 2px; opacity: 0.75; margin-bottom: 6px; }
+.hero-title { font-size: 22px; font-weight: 800; line-height: 1.2; margin-bottom: 8px; }
+.hero-desc { font-size: 13px; opacity: 0.85; line-height: 1.6; }
+.hero-badges { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
+
+/* Badge */
+.badge { background: #74C69D; color: #1B4332; font-size: 11px; font-weight: 700; border-radius: 20px; padding: 3px 10px; display: inline-block; margin-right: 6px; margin-bottom: 6px; }
+.badge-blue { background: #DBEAFE; color: #1D4ED8; }
+.badge-green { background: #D8F3DC; color: #1B4332; }
+
+/* Rows */
+.row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid #E9F5EC; gap: 8px; }
+.row:last-child { border-bottom: none; }
+.row-label { font-size: 13px; color: #374151; flex: 1; }
+.row-value { font-size: 13px; font-weight: 600; color: #065F46; text-align: right; }
+.row-value.bold { font-weight: 700; color: #1B4332; }
+
+/* Steps */
+.step { display: flex; gap: 14px; margin-bottom: 16px; }
+.step-num { min-width: 32px; height: 32px; border-radius: 50%; background: #1B4332; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; margin-top: 2px; }
+.step-title { font-size: 14px; font-weight: 700; color: #1B4332; }
+.step-desc { font-size: 13px; color: #4B5563; margin-top: 3px; }
+.step-sub { font-size: 12px; color: #6B7280; margin-top: 4px; font-style: italic; }
+
+/* Model cards */
+.model-header { display: flex; justify-content: space-between; align-items: flex-start; }
+.model-name { font-weight: 700; font-size: 15px; }
+.model-sub { font-size: 12px; margin-top: 2px; }
+.model-price { font-size: 16px; font-weight: 800; }
+.model-details { margin-top: 10px; font-size: 13px; color: #374151; line-height: 1.6; }
+.model-blue .model-name, .model-blue .model-price { color: #0369A1; }
+.model-blue .model-sub { color: #0284C7; }
+.model-green .model-name, .model-green .model-price { color: #1B4332; }
+.model-green .model-sub { color: #2D6A4F; }
+.model-orange .model-name, .model-orange .model-price { color: #9A3412; }
+.model-purple .model-name, .model-purple .model-price { color: #5B21B6; }
+
+/* Summary profit */
+.profit-box { background: #D8F3DC; border: 1px solid #74C69D; border-radius: 12px; padding: 14px 16px; text-align: center; font-size: 14px; font-weight: 700; color: #1B4332; }
+
+/* Info box */
+.info-text { font-size: 13px; color: #374151; line-height: 1.7; }
+
+/* Footer */
+.footer { background: #1B4332; padding: 16px 20px; text-align: center; color: #74C69D; font-size: 11px; }
+.footer strong { color: #fff; font-weight: 600; }
+
+/* Tabs content */
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* Highlight yellow */
+.text-yellow { font-size: 13px; color: #92400E; line-height: 1.6; }
+.text-green-dark { font-size: 13px; color: #1B4332; line-height: 1.7; }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-sub">BUSINESS PLAN · NITESH MALUSARE</div>
+    <div class="header-title">🌿 Shevga Solar Processing Unit</div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs" id="tabs">
+    <button class="tab active" onclick="showTab('overview', this)">🌿 Overview</button>
+    <button class="tab" onclick="showTab('dryer', this)">☀️ Solar Dryer</button>
+    <button class="tab" onclick="showTab('process', this)">⚙️ Process</button>
+    <button class="tab" onclick="showTab('investment', this)">💰 Investment</button>
+    <button class="tab" onclick="showTab('marketing', this)">📢 Marketing</button>
+    <button class="tab" onclick="showTab('schemes', this)">🏛️ Schemes</button>
+  </div>
+
+  <!-- Content -->
+  <div class="content">
+
+    <!-- OVERVIEW -->
+    <div id="tab-overview" class="tab-content active">
+      <div class="hero">
+        <div class="hero-loc">MAHAD · RAIGAD · 402303</div>
+        <div class="hero-title">🌿 Shevga Solar<br>Processing Business</div>
+        <div class="hero-desc">Moringa Pods (Sange) + Leaves Powder — Solar Drying based Value-Added Processing Unit</div>
+        <div class="hero-badges">
+          <span class="badge">Low Investment</span>
+          <span class="badge">High Demand</span>
+          <span class="badge">Export Ready</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Business Tera Kya Hai?</div>
+        <div class="card">
+          <div class="info-text">
+            Tune gaon mein <strong>shevga (Moringa Oleifera)</strong> se 2 products banana hai:<br><br>
+            <strong>1. Shevga Sange</strong> — Fresh pods direct sell + dried pods<br>
+            <strong>2. Shevga Patti Powder</strong> — Moringa Leaf Powder (superfood)<br><br>
+            Dono products mein <strong>Raheja Solar Dryer</strong> use hoga, jisse bijli ka kharcha nahi, aur nutrients preserve rehta hai.
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Products & Market Price</div>
+        <div class="card">
+          <div class="row"><span class="row-label">🥬 Shevga Patti Powder (Retail)</span><span class="row-value">₹200–500/kg</span></div>
+          <div class="row"><span class="row-label">🥬 Shevga Patti Powder (Wholesale)</span><span class="row-value">₹80–150/kg</span></div>
+          <div class="row"><span class="row-label">🌿 Moringa Powder (Export)</span><span class="row-value">₹600–900/kg</span></div>
+          <div class="row"><span class="row-label">🫛 Shevga Sange (Fresh)</span><span class="row-value">₹20–40/kg</span></div>
+          <div class="row"><span class="row-label">🫛 Shevga Sange (Dried)</span><span class="row-value bold">₹80–120/kg</span></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Quick Business Summary</div>
+        <div class="card">
+          <div class="row"><span class="row-label">Starting Investment</span><span class="row-value">₹80,000–1.5 Lakh</span></div>
+          <div class="row"><span class="row-label">Monthly Revenue (Year 1)</span><span class="row-value">₹25,000–50,000</span></div>
+          <div class="row"><span class="row-label">Break-even period</span><span class="row-value">8–12 months</span></div>
+          <div class="row"><span class="row-label">Raw material (Shevga patti)</span><span class="row-value bold">Gaon se milti hai</span></div>
+        </div>
+      </div>
+
+      <div class="card card-yellow">
+        <div class="text-yellow">
+          💡 <strong>Mahad, Raigad ka advantage:</strong> Coastal climate + rainfall shevga ke liye perfect hai. Konkan region mein shevga naturally ugta hai — raw material cost almost ZERO agar khud ka ya gaon ka tree hai.
+        </div>
+      </div>
+    </div>
+
+    <!-- SOLAR DRYER -->
+    <div id="tab-dryer" class="tab-content">
+      <div class="section">
+        <div class="section-title">Raheja Solar Food Processing (RSFP)</div>
+        <div class="card">
+          <div class="info-text">
+            📍 <strong>Company:</strong> Raheja Solar Food Processing Pvt. Ltd.<br>
+            📍 <strong>Location:</strong> Indore, Madhya Pradesh<br>
+            🌐 <strong>Website:</strong> rsfp.in / rahejasolar.in<br>
+            📞 <strong>Contact:</strong> IndiaMart pe "Raheja Solar" search karo<br>
+            ✅ <strong>GSTIN:</strong> 23AAJCR9159B1ZC (verified company)
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Model Range & Prices</div>
+
+        <div class="card card-blue model-blue">
+          <div class="model-header">
+            <div>
+              <div class="model-name">RSFP C20 — "SAHAJ"</div>
+              <div class="model-sub">Small / Beginner Model</div>
+            </div>
+            <div class="model-price">₹31,500</div>
+          </div>
+          <div class="model-details">
+            • Capacity: <strong>20 kg/batch</strong><br>
+            • DIY setup, no technical skills needed<br>
+            • Portable & lightweight<br>
+            • Perfect for: Trial start, 1–2 acre produce<br>
+            • Monthly output: ~200–300 kg dry patti
+          </div>
+          <span class="badge badge-blue" style="margin-top:10px; display:inline-block;">✅ Tera Best Starting Option</span>
+        </div>
+
+        <div class="card model-green">
+          <div class="model-header">
+            <div>
+              <div class="model-name">RSFP C40 — "SAMAGRA 1"</div>
+              <div class="model-sub" style="color:#2D6A4F;">Medium / Growth Model</div>
+            </div>
+            <div class="model-price">₹58,322</div>
+          </div>
+          <div class="model-details">
+            • Capacity: <strong>40 kg/batch</strong><br>
+            • Higher output, good for SHG/FPO<br>
+            • Moringa + Mango + Kaju — multi-product<br>
+            • Monthly output: ~400–600 kg dry patti<br>
+            • 6–8 months ROI expected
+          </div>
+          <span class="badge badge-green" style="margin-top:10px; display:inline-block;">🔥 Best Value for Money</span>
+        </div>
+
+        <div class="card card-orange model-orange">
+          <div class="model-header">
+            <div>
+              <div class="model-name">RSFP C60</div>
+              <div class="model-sub" style="color:#C2410C;">Large / Commercial</div>
+            </div>
+            <div class="model-price">₹88,935</div>
+          </div>
+          <div class="model-details">
+            • Capacity: <strong>60 kg/batch</strong><br>
+            • For FPO / Group business<br>
+            • Phase 2 mein upgrade karein
+          </div>
+        </div>
+
+        <div class="card card-purple model-purple">
+          <div class="model-header">
+            <div>
+              <div class="model-name">RSFP C500 — "AGRAJ"</div>
+              <div class="model-sub" style="color:#7C3AED;">Industrial Scale</div>
+            </div>
+            <div class="model-price">₹3,44,137</div>
+          </div>
+          <div class="model-details">
+            • Capacity: <strong>500 kg/batch</strong><br>
+            • Large agribusiness / export unit
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Dryer ke Saath Kya Chahiye?</div>
+        <div class="card">
+          <div class="row"><span class="row-label">Pulverizer / Grinder (patti powder ke liye)</span><span class="row-value">₹15,000–35,000</span></div>
+          <div class="row"><span class="row-label">Weighing Scale (digital)</span><span class="row-value">₹1,500–3,000</span></div>
+          <div class="row"><span class="row-label">Sealing Machine (pouch)</span><span class="row-value">₹3,000–8,000</span></div>
+          <div class="row"><span class="row-label">Packing Pouches (1000 pcs)</span><span class="row-value">₹2,000–5,000</span></div>
+          <div class="row"><span class="row-label">Total Accessories</span><span class="row-value bold">₹21,500–51,000</span></div>
+        </div>
+      </div>
+
+      <div class="card card-yellow">
+        <div class="text-yellow">
+          💡 <strong>Tip:</strong> C20 se shuru karo (₹31,500), 6 months baad profit se C40 upgrade karo. Raheja APEDA aur SHG/FPO ko special discount bhi deta hai — poochho!
+        </div>
+      </div>
+    </div>
+
+    <!-- PROCESS -->
+    <div id="tab-process" class="tab-content">
+      <div class="section">
+        <div class="section-title">Part A: Shevga Patti Powder Process</div>
+        <div class="step"><div class="step-num">1</div><div><div class="step-title">Patti Collection (Harvest)</div><div class="step-desc">Subah 6–9 baje patti todo — fresh, green, disease-free. Month mein 2–3 baar harvest possible.</div><div class="step-sub">🌿 1 acre shevga tree se ~500–800 kg fresh patti/year milti hai</div></div></div>
+        <div class="step"><div class="step-num">2</div><div><div class="step-title">Cleaning & Washing</div><div class="step-desc">Fresh patti ko saaf paani mein dholo. Stems (danthi) alag karo — sirf leaves use karo powder ke liye.</div><div class="step-sub">⚠️ Stems mein fiber zyada, powder quality ghatata hai</div></div></div>
+        <div class="step"><div class="step-num">3</div><div><div class="step-title">Shade Drying (1st Stage)</div><div class="step-desc">Direct sun mein mat sookao! Pehle 4–6 ghante chhaanv mein sookao — Vitamin C protect hota hai.</div><div class="step-sub">🌡️ Temperature: 40–50°C ideal</div></div></div>
+        <div class="step"><div class="step-num">4</div><div><div class="step-title">Solar Dryer (2nd Stage)</div><div class="step-desc">Raheja solar dryer mein spread karo. 2–3 din mein patti completely dry ho jaati hai. Moisture 5–8% tak aata hai.</div><div class="step-sub">✅ 10 kg fresh patti → 1 kg dry patti</div></div></div>
+        <div class="step"><div class="step-num">5</div><div><div class="step-title">Grinding / Pulverizing</div><div class="step-desc">Dry patti ko pulverizer mein daalo. Fine powder milta hai — sieve se 80–100 mesh filter karo.</div><div class="step-sub">Color: Dark green = good quality</div></div></div>
+        <div class="step"><div class="step-num">6</div><div><div class="step-title">Quality Check</div><div class="step-desc">Moisture, color, aur smell check karo. Green color, no smell = premium grade. Dark brown = low grade.</div><div class="step-sub">🧪 NABL lab test (export ke liye): ₹5,000–8,000</div></div></div>
+        <div class="step"><div class="step-num">7</div><div><div class="step-title">Packing & Sealing</div><div class="step-desc">100g / 250g / 500g food-grade pouches mein pack karo. Sealing machine se seal karo. Label lagao.</div><div class="step-sub">📦 Shelf life: 12–18 months (proper packing mein)</div></div></div>
+        <div class="step"><div class="step-num">8</div><div><div class="step-title">Storage</div><div class="step-desc">Cool, dry, dark jagah store karo. Direct sunlight se door rakho. Temperature: below 25°C.</div><div class="step-sub">🏪 Ready for local sell / export</div></div></div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Part B: Shevga Sange (Pods) Process</div>
+        <div class="step"><div class="step-num">1</div><div><div class="step-title">Fresh Pod Harvest</div><div class="step-desc">25–30 cm ki green, tender pods todo. Too mature pods mein fiber zyada hota hai.</div><div class="step-sub">🫛 Fresh pods directly sell — local sabzi market</div></div></div>
+        <div class="step"><div class="step-num">2</div><div><div class="step-title">Grading</div><div class="step-desc">Size aur quality ke hisab se sort karo: A grade (30cm+), B grade (20–30cm), C grade (reject).</div><div class="step-sub">A grade = premium price</div></div></div>
+        <div class="step"><div class="step-num">3</div><div><div class="step-title">Solar Drying (Dried Pods ke liye)</div><div class="step-desc">Pods ko slice karke solar dryer mein 3–4 din sookao. Dried pods shelf life 6+ months.</div><div class="step-sub">Fresh: ₹20-40/kg → Dried: ₹80-120/kg — 3x value!</div></div></div>
+        <div class="step"><div class="step-num">4</div><div><div class="step-title">Packing</div><div class="step-desc">Dried pods ko airtight bags mein pack karo. Export ke liye vacuum pack karo.</div><div class="step-sub">500g / 1kg SKUs best chalta hai</div></div></div>
+      </div>
+
+      <div class="card card-green-dark">
+        <div class="text-green-dark" style="font-weight:600; margin-bottom:8px;">📊 Conversion Ratios (Important!)</div>
+        <div class="info-text">
+          • 10 kg fresh patti → 1 kg powder<br>
+          • 5 kg fresh pods → 1 kg dried pods<br>
+          • 1 kg powder (retail) = ₹200–500<br>
+          • Raw material cost: ₹5–15/kg fresh leaves
+        </div>
+      </div>
+    </div>
+
+    <!-- INVESTMENT -->
+    <div id="tab-investment" class="tab-content">
+      <div class="section">
+        <div class="section-title">Starting Investment (Phase 1 — C20 Dryer)</div>
+        <div class="card">
+          <div class="row"><span class="row-label">Raheja RSFP C20 Solar Dryer</span><span class="row-value">₹31,500</span></div>
+          <div class="row"><span class="row-label">Pulverizer / Grinder</span><span class="row-value">₹20,000</span></div>
+          <div class="row"><span class="row-label">Sealing Machine</span><span class="row-value">₹5,000</span></div>
+          <div class="row"><span class="row-label">Weighing Scale + Sieves</span><span class="row-value">₹3,000</span></div>
+          <div class="row"><span class="row-label">Packing Pouches (1000 pcs)</span><span class="row-value">₹3,500</span></div>
+          <div class="row"><span class="row-label">FSSAI License</span><span class="row-value">₹3,000</span></div>
+          <div class="row"><span class="row-label">GST Registration</span><span class="row-value">Free</span></div>
+          <div class="row"><span class="row-label">Sheds / Trays (local)</span><span class="row-value">₹5,000</span></div>
+          <div class="row"><span class="row-label">Working Capital (3 months)</span><span class="row-value">₹15,000</span></div>
+          <div class="row"><span class="row-label">🔴 TOTAL (Phase 1)</span><span class="row-value bold">~₹86,000</span></div>
+        </div>
+        <span class="badge badge-green">PMEGP ya SHG loan se cover ho sakta hai</span>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Growth Investment (Phase 2 — C40 Upgrade)</div>
+        <div class="card">
+          <div class="row"><span class="row-label">Raheja RSFP C40 Solar Dryer</span><span class="row-value">₹58,322</span></div>
+          <div class="row"><span class="row-label">Better Grinder (fine mesh)</span><span class="row-value">₹35,000</span></div>
+          <div class="row"><span class="row-label">Lab Testing (NABL)</span><span class="row-value">₹10,000</span></div>
+          <div class="row"><span class="row-label">IEC Code (Export)</span><span class="row-value">₹500</span></div>
+          <div class="row"><span class="row-label">APEDA Registration</span><span class="row-value">₹10,000</span></div>
+          <div class="row"><span class="row-label">Branding + Packaging Design</span><span class="row-value">₹5,000</span></div>
+          <div class="row"><span class="row-label">🔴 TOTAL (Phase 2)</span><span class="row-value bold">~₹1.2 Lakh</span></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Monthly Revenue Projection</div>
+        <div class="card">
+          <div style="font-size:13px; font-weight:700; color:#1B4332; margin-bottom:10px;">C20 Dryer — Month 1–6 (Learning Phase)</div>
+          <div class="row"><span class="row-label">Fresh patti collect (monthly)</span><span class="row-value">500 kg</span></div>
+          <div class="row"><span class="row-label">Powder yield (10:1 ratio)</span><span class="row-value">50 kg</span></div>
+          <div class="row"><span class="row-label">Selling price (wholesale avg)</span><span class="row-value">₹120/kg</span></div>
+          <div class="row"><span class="row-label">Gross Revenue</span><span class="row-value">₹6,000</span></div>
+          <div class="row"><span class="row-label">Fresh Sange sell (parallel)</span><span class="row-value">₹5,000–8,000</span></div>
+          <div class="row"><span class="row-label">🟢 Total Monthly Revenue</span><span class="row-value bold">₹11,000–14,000</span></div>
+        </div>
+
+        <div class="card card-yellow">
+          <div style="font-size:13px; font-weight:700; color:#92400E; margin-bottom:10px;">C40 Dryer — Month 7–12 (Growth Phase)</div>
+          <div class="row" style="border-color:#FDE68A;"><span class="row-label">Monthly powder output</span><span class="row-value" style="color:#92400E;">150–200 kg</span></div>
+          <div class="row" style="border-color:#FDE68A;"><span class="row-label">Mix: retail + wholesale</span><span class="row-value" style="color:#92400E;">₹200 avg/kg</span></div>
+          <div class="row" style="border-color:#FDE68A;"><span class="row-label">Powder Revenue</span><span class="row-value" style="color:#92400E;">₹30,000–40,000</span></div>
+          <div class="row" style="border-color:#FDE68A;"><span class="row-label">Dried Sange Revenue</span><span class="row-value" style="color:#92400E;">₹8,000–12,000</span></div>
+          <div class="row" style="border-color:#FDE68A; border:none;"><span class="row-label">🟢 Total Monthly Revenue</span><span class="row-value bold" style="color:#92400E;">₹38,000–52,000</span></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Running Cost per Month</div>
+        <div class="card">
+          <div class="row"><span class="row-label">Raw material (labor)</span><span class="row-value">₹2,000–4,000</span></div>
+          <div class="row"><span class="row-label">Packaging material</span><span class="row-value">₹1,500–3,000</span></div>
+          <div class="row"><span class="row-label">Transport to market</span><span class="row-value">₹1,000–2,000</span></div>
+          <div class="row"><span class="row-label">Miscellaneous</span><span class="row-value">₹1,000</span></div>
+          <div class="row"><span class="row-label">🔴 Total Running Cost</span><span class="row-value bold">₹5,500–10,000</span></div>
+        </div>
+      </div>
+
+      <div class="profit-box">Net Profit (Phase 2): ₹28,000–42,000/month 🎯</div>
+    </div>
+
+    <!-- MARKETING -->
+    <div id="tab-marketing" class="tab-content">
+      <div class="section">
+        <div class="section-title">Local Marketing (Start Here)</div>
+        <div class="step"><div class="step-num">1</div><div><div class="step-title">Mahad Local Market / APMC</div><div class="step-desc">Fresh shevga sange — Mahad APMC mein directly sell karo. No packaging needed, instant cash.</div><div class="step-sub">📍 Mahad APMC, Near Bus Stand</div></div></div>
+        <div class="step"><div class="step-num">2</div><div><div class="step-title">Ayurvedic / Health Stores</div><div class="step-desc">Mahad, Poladpur, Mangaon ke Ayurvedic shops mein moringa powder supply karo.</div><div class="step-sub">💊 200g/500g branded packets, ₹200-350 MRP</div></div></div>
+        <div class="step"><div class="step-num">3</div><div><div class="step-title">WhatsApp Business</div><div class="step-desc">'Mahad Moringa' naam se WhatsApp Business account banao. Local doctor aur health-conscious log seedha order denge.</div><div class="step-sub">📱 Free marketing, local trust important hai</div></div></div>
+        <div class="step"><div class="step-num">4</div><div><div class="step-title">Konkan Produce Brand</div><div class="step-desc">'Konkan Moringa' ya 'Sahyadri Shevga' naam se brand banao — regional identity premium price deti hai.</div><div class="step-sub">🏔️ Konkan brand = premium positioning</div></div></div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Online Marketing (Month 3 Onwards)</div>
+        <div class="step"><div class="step-num">1</div><div><div class="step-title">IndiaMart Free Listing</div><div class="step-desc">indiamart.com pe free seller listing. B2B wholesale buyers directly contact karte hain. 50–500 kg orders milte hain.</div><div class="step-sub">💰 Setup: Free | Response: 24-48 hrs</div></div></div>
+        <div class="step"><div class="step-num">2</div><div><div class="step-title">Amazon/Flipkart Seller</div><div class="step-desc">Amazon seller account banao. Moringa powder 100g/250g listings daalo. Health & wellness category mein demand high hai.</div><div class="step-sub">📦 FBA se shipping issue nahi</div></div></div>
+        <div class="step"><div class="step-num">3</div><div><div class="step-title">Meesho / JioMart</div><div class="step-desc">Small resellers tumhara product bech sakte hain. Commission-based — tumhe marketing nahi karni.</div><div class="step-sub">Perfect for village-based sellers network</div></div></div>
+        <div class="step"><div class="step-num">4</div><div><div class="step-title">Instagram / Facebook Reels</div><div class="step-desc">Shevga se moringa powder banana ka process video banao. Gaon ki natural processing dekh ke log trust karte hain.</div><div class="step-sub">📸 Gaon ki setting = unique authentic content</div></div></div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">B2B Bulk Buyers</div>
+        <div class="card">
+          <div class="info-text">
+            <strong>🏪 Potential Bulk Buyers:</strong><br>
+            • Herbal/Ayurvedic companies (Patanjali dealers)<br>
+            • Organic food brands (IndiaMart se approach)<br>
+            • Export houses (Pune, Mumbai based)<br>
+            • School/Anganwadi — government nutrition programs<br>
+            • Gym supplement brands
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Export (Month 6+ Onwards)</div>
+        <div class="card card-purple">
+          <div class="row" style="border-color:#DDD6FE;"><span class="row-label">Target markets</span><span class="row-value" style="color:#5B21B6;">USA, Germany, UAE, UK</span></div>
+          <div class="row" style="border-color:#DDD6FE;"><span class="row-label">Export price (moringa powder)</span><span class="row-value" style="color:#5B21B6;">₹600–900/kg</span></div>
+          <div class="row" style="border-color:#DDD6FE;"><span class="row-label">vs Domestic wholesale</span><span class="row-value" style="color:#5B21B6;">₹80–150/kg</span></div>
+          <div class="row" style="border-color:#DDD6FE; border:none;"><span class="row-label">Profit multiplier</span><span class="row-value bold" style="color:#5B21B6;">5–8x 🔥</span></div>
+        </div>
+      </div>
+
+      <div class="card card-yellow">
+        <div class="text-yellow">
+          💡 <strong>Best Strategy for Nitesh:</strong><br>
+          Month 1–3: Local APMC + WhatsApp → Month 4–6: IndiaMart + Amazon → Month 7+: Export readiness
+        </div>
+      </div>
+    </div>
+
+    <!-- SCHEMES -->
+    <div id="tab-schemes" class="tab-content">
+      <div class="section">
+        <div class="section-title">Central Government Schemes</div>
+
+        <div class="card card-blue">
+          <div style="font-weight:700; font-size:14px; color:#1D4ED8; margin-bottom:8px;">🏛️ PMFME Scheme</div>
+          <div class="row" style="border-color:#BFDBFE;"><span class="row-label">Subsidy</span><span class="row-value" style="color:#1D4ED8;">35% credit linked (max ₹10 Lakh)</span></div>
+          <div class="row" style="border-color:#BFDBFE;"><span class="row-label">Eligible amount</span><span class="row-value" style="color:#1D4ED8;">Up to ₹3.5 Lakh</span></div>
+          <div class="row" style="border-color:#BFDBFE;"><span class="row-label">For what</span><span class="row-value" style="color:#1D4ED8;">Equipment, solar dryer, grinder</span></div>
+          <div class="row" style="border-color:#BFDBFE; border:none;"><span class="row-label">Apply at</span><span class="row-value" style="color:#1D4ED8;">pmfme.mofpi.gov.in</span></div>
+          <div style="font-size:12px; color:#2563EB; margin-top:8px;">✅ Shevga powder eligible!</div>
+        </div>
+
+        <div class="card card-blue">
+          <div style="font-weight:700; font-size:14px; color:#1D4ED8; margin-bottom:8px;">🌾 PMEGP Scheme</div>
+          <div class="row" style="border-color:#BFDBFE;"><span class="row-label">Loan amount</span><span class="row-value" style="color:#1D4ED8;">Up to ₹50 Lakh (manufacturing)</span></div>
+          <div class="row" style="border-color:#BFDBFE;"><span class="row-label">Subsidy (Rural area)</span><span class="row-value" style="color:#1D4ED8;">25–35%</span></div>
+          <div class="row" style="border-color:#BFDBFE; border:none;"><span class="row-label">Apply at</span><span class="row-value" style="color:#1D4ED8;">kviconline.gov.in</span></div>
+          <div style="font-size:12px; color:#2563EB; margin-top:8px;">✅ Gaon + Manufacturing = higher subsidy slab</div>
+        </div>
+
+        <div class="card card-blue">
+          <div style="font-weight:700; font-size:14px; color:#1D4ED8; margin-bottom:8px;">🌍 APEDA Export Support</div>
+          <div class="row" style="border-color:#BFDBFE;"><span class="row-label">Registration fee</span><span class="row-value" style="color:#1D4ED8;">₹10,000 (5 years)</span></div>
+          <div class="row" style="border-color:#BFDBFE;"><span class="row-label">Packaging cost support</span><span class="row-value" style="color:#1D4ED8;">Up to 50% reimburse</span></div>
+          <div class="row" style="border-color:#BFDBFE; border:none;"><span class="row-label">Website</span><span class="row-value" style="color:#1D4ED8;">apeda.gov.in</span></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Maharashtra State Schemes</div>
+
+        <div class="card">
+          <div style="font-weight:700; font-size:14px; color:#1B4332; margin-bottom:8px;">🏢 Agri Infra Fund (AIF)</div>
+          <div class="info-text">
+            • 3% interest subvention on loans<br>
+            • Solar dryer eligible<br>
+            • Apply through NABARD / cooperative bank
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="font-weight:700; font-size:14px; color:#1B4332; margin-bottom:8px;">👩 Mahila SHG / FPO Support</div>
+          <div class="info-text">
+            • Gaon ki mahila group ke saath SHG banao<br>
+            • ₹10 Lakh tak revolving fund milta hai<br>
+            • Raigad Zilla Parishad / MAVIM se contact karo<br>
+            • Solar dryer group mein affordable ho jaata hai
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="font-weight:700; font-size:14px; color:#1B4332; margin-bottom:8px;">🌿 ODOP — One District One Product</div>
+          <div class="info-text">
+            • Raigad ke local products ko branding support<br>
+            • Marketing + packaging subsidy<br>
+            • Apply: District Industries Centre (DIC), Alibag
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Action Plan — Kahan Apply Karna Hai?</div>
+        <div class="card">
+          <div class="row"><span class="row-label">Step 1: Udyam Registration</span><span class="row-value">udyamregistration.gov.in — Free</span></div>
+          <div class="row"><span class="row-label">Step 2: FSSAI License</span><span class="row-value">fssai.gov.in — ₹2,000–5,000</span></div>
+          <div class="row"><span class="row-label">Step 3: PMFME Apply</span><span class="row-value">pmfme.mofpi.gov.in</span></div>
+          <div class="row"><span class="row-label">Step 4: DIC Alibag Visit</span><span class="row-value">Raigad District Ind. Centre</span></div>
+          <div class="row"><span class="row-label">Step 5: APEDA (export phase)</span><span class="row-value bold">apeda.gov.in</span></div>
+        </div>
+      </div>
+
+      <div class="card" style="background:#D8F3DC; border-color:#74C69D;">
+        <div style="font-size:13px; color:#1B4332; line-height:1.7; font-weight:600;">
+          📞 DIC Raigad Contact:<br>
+          <span style="font-weight:400;">District Industries Centre, Alibag, Raigad<br>
+          📞 02141-222228<br>
+          PMFME + PMEGP dono ke forms milte hain FREE mein.</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /content -->
+
+  <!-- Footer -->
+  <div class="footer">
+    Raheja Solar: rsfp.in | DIC Raigad: 02141-222228<br>
+    <strong>Mahad · Raigad 402303</strong>
+  </div>
+
+</div><!-- /app -->
+
+<script>
+function showTab(id, el) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  el.classList.add('active');
+  el.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+}
+</script>
+</body>
+</html>
